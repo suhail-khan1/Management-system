@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                        // Support modern JS features
+    "module": "commonjs",                      // Required for Node.js
+    "outDir": "./dist",                        // Where compiled code goes
+    "rootDir": "./",                           // Root directory is the project base
+    "strict": false,                           // Disable all strict checks
+    "moduleResolution": "node",                // Use Node module resolution
+    "esModuleInterop": true,                   // Allow default import from CJS
+    "resolveJsonModule": true,                 // Allow importing JSON files
+    "forceConsistentCasingInFileNames": true,  // File name consistency
+    "skipLibCheck": true,                      // Skip node_modules checks
+    "types": ["node", "jasmine"]               // Node and Jasmine types
+  },
+  "include": [
+    "auth/**/*",
+    "user/**/*",
+    "document/**/*",
+    "ingestion/**/*",
+    "middleware/**/*",
+    "utils/**/*",
+    "config/**/*",
+    "server.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
