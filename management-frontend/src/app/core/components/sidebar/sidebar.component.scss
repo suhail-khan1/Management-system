@@ -1,0 +1,54 @@
+.sidenav-container {
+    height: 100vh;
+
+    .sidenav {
+        width: 240px;
+        background-color: #f5f5f5;
+        padding-top: 1rem;
+
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 1rem;
+
+            h3 {
+                font-size: 1.2rem;
+                color: #3f51b5;
+            }
+        }
+
+        .mat-list-item {
+            font-weight: 500;
+        }
+
+        .active-link {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+    }
+
+    .logout-btn {
+        position: absolute;
+        bottom: 16px;
+        width: 100%;
+        justify-content: flex-start;
+        font-weight: bold;
+        color: #c62828 !important;
+    }
+
+    .sidenav-content {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .toggle-btn {
+        margin-right: 1rem;
+    }
+
+    .main-content {
+        padding: 1rem;
+        background-color: #fafafa;
+        flex: 1;
+        overflow-y: auto;
+    }
+}

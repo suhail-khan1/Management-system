@@ -1,0 +1,18 @@
+<div class="upload-container">
+    <h2>Upload Document</h2>
+
+    <form [formGroup]="uploadForm" (ngSubmit)="upload()">
+        <div class="file-input-wrapper">
+            <label for="fileInput" class="mat-raised-button mat-primary">
+                Choose File
+            </label>
+            <input type="file" (change)="handleFileInput($event)" required
+                accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg" />
+        </div>
+        <button mat-flat-button color="primary" type="submit" [disabled]="uploadForm.invalid || uploading">
+            Upload
+            <mat-progress-spinner *ngIf="uploading" mode="indeterminate" diameter="20"
+                color="accent"></mat-progress-spinner>
+        </button>
+    </form>
+</div>

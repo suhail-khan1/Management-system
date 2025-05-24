@@ -1,0 +1,64 @@
+.container {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+
+  h2 {
+    text-align: center;
+    color: #3f51b5;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  mat-form-field {
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    padding: 0.5rem;
+  }
+
+  mat-error {
+    font-size: 0.75rem;
+    color: #e53935;
+    margin-top: 0.25rem;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    button {
+      min-width: 100px;
+      font-weight: 500;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+
+    .button-group {
+      flex-direction: column;
+      align-items: stretch;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

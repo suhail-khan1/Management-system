@@ -1,0 +1,30 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened class="sidenav">
+        <div class="sidebar-header">
+            <h3>Dashboard</h3>
+        </div>
+        <mat-nav-list>
+            <a mat-list-item routerLink="/dashboard/users" routerLinkActive="active-link">Users</a>
+            <a mat-list-item routerLink="/dashboard/documents" routerLinkActive="active-link">Documents</a>
+            <a mat-list-item routerLink="/dashboard/ingestion" routerLinkActive="active-link">Ingestion</a>
+            <button mat-button (click)="logout()" class="logout-btn">
+                <mat-icon>logout</mat-icon>
+                Logout
+            </button>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="sidenav-content">
+        <mat-toolbar color="primary">
+            <button mat-icon-button (click)="sidenav.toggle()" class="toggle-btn">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>Dashboard</span>
+        </mat-toolbar>
+
+
+        <div class="main-content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

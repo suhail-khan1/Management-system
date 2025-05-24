@@ -1,0 +1,22 @@
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 400px;
+
+    .file-input-wrapper {
+        position: relative;
+        display: inline-block;
+
+        input[type='file'] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        label {
+            cursor: pointer;
+        }
+    }
+}

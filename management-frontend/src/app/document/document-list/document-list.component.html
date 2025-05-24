@@ -1,0 +1,42 @@
+<div class="document-list">
+  <div class="header">
+    <h2>Documents</h2>
+    <button mat-flat-button color="primary" routerLink="/dashboard/documents/upload">Upload Document</button>
+  </div>
+
+  <mat-progress-spinner *ngIf="loading" mode="indeterminate"></mat-progress-spinner>
+
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" *ngIf="!loading">
+
+    <!-- Title Column -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+      <td mat-cell *matCellDef="let doc"> {{ doc.title }} </td>
+    </ng-container>
+
+    <!-- Description Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+      <td mat-cell *matCellDef="let doc"> {{ doc.description }} </td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let doc">
+        <button mat-icon-button color="warn" aria-label="Delete" (click)="deleteDocument(doc._id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <a [href]="doc.url" target="_blank" rel="noopener">
+          <button mat-icon-button aria-label="Download">
+            <mat-icon>download</mat-icon>
+          </button>
+        </a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+</div>

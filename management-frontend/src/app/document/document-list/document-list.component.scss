@@ -1,0 +1,16 @@
+.document-list {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  table {
+    width: 100%;
+  }
+}
